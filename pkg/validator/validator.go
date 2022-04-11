@@ -56,7 +56,7 @@ func New(schemaLocations []string, opts Opts) (Validator, error) {
 	// Default to our kubernetes-json-schema fork
 	// raw.githubusercontent.com is frontend by Fastly and very fast
 	if len(schemaLocations) == 0 {
-		schemaLocations = []string{"https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/{{ .NormalizedKubernetesVersion }}-standalone{{ .StrictSuffix }}/{{ .ResourceKind }}{{ .KindSuffix }}.json"}
+		schemaLocations = []string{"https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/{{ .NormalizedKubernetesVersion }}{{ .StrictSuffix }}/{{ .ResourceKind }}{{ .KindSuffix }}.json"}
 	}
 
 	registries := []registry.Registry{}
